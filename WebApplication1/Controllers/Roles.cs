@@ -25,9 +25,9 @@ namespace WebApplication1.Controllers
             return View(new IdentityRole());
         }
         [HttpPost]
-        public async Task<IActionResult> Create(IdentityRole roles)
+        public async Task<IActionResult> Create(IdentityRole newRoles)
         {
-            await _user.CreateAsync(roles);
+            await _user.CreateAsync(newRoles);
             return RedirectToAction("Index");
         }
     }
